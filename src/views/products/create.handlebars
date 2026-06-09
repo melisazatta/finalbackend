@@ -1,0 +1,63 @@
+<h1>Nuevo Product</h1>
+<form action="/products" method="POST">
+    {{!-- <input type="text" name="nombre" value="{{data.nombre}}" placeholder="Nombre">
+    <input type="number" name="precio" value="{{data.precio}}" placeholder="Precio">
+    <input type="number" name="stock" value="{{data.stock}}" placeholder="Stock"> --}}
+     <input
+        type="text"
+        name="title"
+        value="{{data.title}}"
+        placeholder="Título"
+    >
+
+    <textarea
+        name="description"
+        placeholder="Descripción"
+    >{{data.description}}</textarea>
+
+    <input
+        type="text"
+        name="code"
+        value="{{data.code}}"
+        placeholder="Código"
+    >
+
+    <input
+        type="number"
+        name="price"
+        value="{{data.price}}"
+        placeholder="Precio"
+    >
+
+    <input
+        type="number"
+        name="stock"
+        value="{{data.stock}}"
+        placeholder="Stock"
+    >
+
+    <input
+        type="text"
+        name="category"
+        value="{{data.category}}"
+        placeholder="Categoría"
+    >
+
+    <input
+        type="text"
+        name="thumbnails"
+        value="{{data.thumbnails}}"
+        placeholder="URL imagen (opcional)"
+    >
+
+    <label>
+        Disponible
+        <input
+            type="checkbox"
+            name="status"
+            checked
+        >
+    </label>
+
+    <button>Guardar</button>
+</form>

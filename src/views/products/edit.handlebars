@@ -1,0 +1,64 @@
+<h1>Editar Product</h1>
+<form action="/products/{{product._id}}?_method=PUT" method="POST">
+    {{!-- <input type="text" name="nombre" value="{{product.nombre}}" placeholder="Nombre">
+    <input type="number" name="price" value="{{product.price}}" placeholder="Precio">
+    <input type="number" name="stock" value="{{product.stock}}" placeholder="Stock"> --}}
+
+ <input
+        type="text"
+        name="title"
+        value="{{product.title}}"
+        placeholder="Título"
+    >
+
+    <textarea
+        name="description"
+        placeholder="Descripción"
+    >{{product.description}}</textarea>
+
+    <input
+        type="text"
+        name="code"
+        value="{{product.code}}"
+        placeholder="Código"
+    >
+
+    <input
+        type="number"
+        name="price"
+        value="{{product.price}}"
+        placeholder="Precio"
+    >
+
+    <input
+        type="number"
+        name="stock"
+        value="{{product.stock}}"
+        placeholder="Stock"
+    >
+
+    <input
+        type="text"
+        name="category"
+        value="{{product.category}}"
+        placeholder="Categoría"
+    >
+
+    <input
+        type="text"
+        name="thumbnails"
+        value="{{product.thumbnails.[0]}}"
+        placeholder="URL imagen"
+    >
+
+    <label>
+        Disponible
+        <input
+            type="checkbox"
+            name="status"
+            {{#if product.status}}checked{{/if}}
+        >
+    </label>
+    
+    <button>Actualizar</button>
+</form>

@@ -1,0 +1,52 @@
+<div class="detalle">
+   <h1>Detalle del product</h1>
+
+<div class="card">
+{{!-- <h2>{{product.nombre}}</h2>
+
+<p>Precio: ${{product.price}}</p>
+
+<p>Stock: {{product.stock}}</p> --}}
+
+ <h2>{{product.title}}</h2>
+
+        <p><strong>Descripción:</strong> {{product.description}}</p>
+
+        <p><strong>Categoría:</strong> {{product.category}}</p>
+
+        <p><strong>Código:</strong> {{product.code}}</p>
+
+        <p><strong>Precio:</strong> ${{product.price}}</p>
+
+        <p><strong>Stock:</strong> {{product.stock}}</p>
+
+        <p>
+            <strong>Estado:</strong>
+            {{#if product.status}}
+                Disponible
+            {{else}}
+                No disponible
+            {{/if}}
+        </p>
+
+        {{#if product.thumbnails.length}}
+            <img
+                src="{{product.thumbnails.[0]}}"
+                alt="{{product.title}}"
+                class="product-image"
+            >
+        {{/if}}
+
+
+{{!-- <p>Carrito ID: {{cid}}</p> --}}
+
+<form action="/cart/{{cid}}/products/{{product._id}}" method="POST">
+    <button type="submit">
+        Agregar al carrito
+    </button>
+</form>
+</div>
+
+<a class="btn" href="/products">Volver</a> 
+</div>
+

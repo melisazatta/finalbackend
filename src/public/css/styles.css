@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    padding: 2rem;
+}
+main h1{
+    text-align: center;
+}
+.ordenar{
+    text-align: right;
+}
+.buscar{
+    text-align: center;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 3rem;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+.card-footer{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.card-footer form {
+    max-width: none;
+    margin: 0;
+}
+
+.card-footer .btn{
+    display: inline-block;
+    padding: 1rem;
+}
+
+button,
+.btn {
+    background: #47cbcf;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 1rem;
+}
+
+button:hover,
+.btn:hover {
+    opacity: .9;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.editform {
+    max-width: 200px;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer{
+    background-color: #2c3e50;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+}
+
+.carrito{
+    /* text-align: center; */
+    padding: 2rem;
+}
+
+.detalle{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.detalle .btn{
+    max-width: 10rem;
+}
