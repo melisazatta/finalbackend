@@ -14,39 +14,8 @@ export async function detailProduct(req, res) {
             products: []
         });
     }
-
-    // console.log(carts);
-
     res.render("products/detail", {
         product,
         cid: cart._id
     })
 }
-
-// export async function addProductToCart(req, res) {
-
-//     const { cid, id } = req.params
-
-//     const cart = await Cart.findById(cid)
-
-//     const existingProduct = cart.products.find(
-//         p => p.product.toString() === id
-//     )
-
-//     if (existingProduct) {
-
-//         existingProduct.cantidad++
-
-//     } else {
-
-//         cart.products.push({
-//             product: id,
-//             cantidad: 1
-//         })
-
-//     }
-
-//     await cart.save()
-
-//     res.redirect(`/cart/${cid}`)
-// }

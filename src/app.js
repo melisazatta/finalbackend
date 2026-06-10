@@ -12,34 +12,37 @@ import { notFound, errorHandler } from './middlewares/errorHandler.js'
 
 import { Server } from "socket.io";
 
+import cartApiRoutes from "./routes/api/cartApiRoutes.js"
+import productApiRoutes from "./routes/api/productApiRoutes.js"
 
 const app = express()
-
 connectDB()
 
 app.use(express.static("./src/public"))
 
 app.use(express.urlencoded({extended: true}))
+
+app.use(express.json())
+
 app.use(methodOverride("_method"))
 
 app.engine("handlebars", exphbs.engine())
 app.set("view engine", "handlebars")
 app.set("views", "./src/views")
-
 //Routes 
 app.use(loadCart)
 
 app.use("/products", productRoutes)
 app.get("/", (req, res) =>
-    res.redirect("/products")
-)
+    res.redirect("/products"))
 
 app.use("/cart", cartRoutes)
+//API
+app.use("/api/products", productApiRoutes);
+app.use("/api/carts", cartApiRoutes);
 
 app.use(notFound)
 app.use(errorHandler)
-
-
 
 const server = app.listen(config.port, () => console.log(`https://localhost:${config.port}`))
 

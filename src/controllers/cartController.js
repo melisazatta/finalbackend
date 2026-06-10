@@ -23,9 +23,6 @@ export async function createCart(req, res) {
 
 export async function addProduct(req, res) {
 
-        console.log("ENTRO A ADD PRODUCT");
-
-
     const { cid, pid } = req.params
 
      console.log("CID:", cid);
@@ -55,7 +52,6 @@ export async function addProduct(req, res) {
         });
 
     }
-
     await cart.save();
 
     const updatedCart = await Cart.findById(cid);
@@ -105,10 +101,6 @@ export async function clearCart(req, res) {
 
 // Actualizar cantidad de un product
 export async function updateQuantity(req, res) {
-
-    //  console.log("ENTRO A UPDATE QUANTITY");
-    // console.log(req.params);
-    // console.log(req.body);
     
     const { cid, pid } = req.params;
     const { cantidad } = req.body;

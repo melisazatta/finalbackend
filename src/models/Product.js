@@ -1,22 +1,6 @@
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
-    // nombre: {
-    //     type: String,
-    //     required: [true, "El nombre es obligatorio."],
-    //     minlength: [3, "El nombre debe tener mínimo 3 caracteres."],
-    //     trim: true,
-    // },
-    // precio: {
-    //      type: Number,
-    //     required: [true, "El precio es obligatorio."],
-    //     min: [0, "El precio no puede ser negativo."],
-    // },
-    // stock: {
-    //     type: Number,
-    //     required: [true, "El stock es obligatorio."],
-    //     min: [0, "El stock no puede ser negativo."],
-    // }
      title: {
         type: String,
         required: [true, "El título es obligatorio."],

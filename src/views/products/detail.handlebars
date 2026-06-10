@@ -2,11 +2,6 @@
    <h1>Detalle del product</h1>
 
 <div class="card">
-{{!-- <h2>{{product.nombre}}</h2>
-
-<p>Precio: ${{product.price}}</p>
-
-<p>Stock: {{product.stock}}</p> --}}
 
  <h2>{{product.title}}</h2>
 
@@ -36,9 +31,6 @@
                 class="product-image"
             >
         {{/if}}
-
-
-{{!-- <p>Carrito ID: {{cid}}</p> --}}
 
 <form action="/cart/{{cid}}/products/{{product._id}}" method="POST">
     <button type="submit">

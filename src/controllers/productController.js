@@ -8,18 +8,15 @@ export async function getAll (req, res) {
 
     limit = parseInt(limit)
     page = parseInt(page)
-
     // Filtro por categoría
     let filter = {}
     if (query) {
         filter.title = { $regex: query, $options: "i" }
     }
-
     // Ordenamiento
     let sortOption = {}
     if (sort === "asc") sortOption.price = 1
     if (sort === "desc") sortOption.price = -1
-
     // Total de products
     const totalProducts = await Product.countDocuments(filter)
 
@@ -95,7 +92,6 @@ export async function update(req, res) {
             new: true,
         } )
 
-
         if(!product){
             throw new Error("Product no encontrado")
         }
@@ -128,17 +124,7 @@ export async function deleteProduct(req, res) {
             }
         }
     )
-
         io.emit("productsActualizados", products)
 
     res.redirect("/products")
 }
-
-// export async function detailCart(req, res) {
-//     console.log("GET carrito")
-//     // res.send("Carrito")
-//     res.render("products/detail", {
-//     product,
-//     cid: _id
-// })
-// }
